@@ -1,43 +1,45 @@
                        IUPred RELEASE NOTES
                        ====================
 
-IUPred Version 2.0
+IUPred2A
 
-by Zsuzsanna Dosztanyi
+by Balint Meszaros, Gabor Erdos and Zsuzsanna Dosztanyi
 
 
-IUPred is supplied in source code form along with the required data files. The
-program is written in python3 and requires no external libraries. To be able to
-run outside the source directory, the IUPred_PATH environment variable has to
-be set to the location of the source files.
+IUPred2A is supplied in source code form along with the required data files. The
+program is written in python3 and requires no external libraries.
 
 NOTE: IUPred is not compatible with python2.x versions!
 
 TO RUN IUPred:
 
-python3 iupred.py seqfile type
+python3 iupred2a.py (options) (sequence file) (iupred2 type)
 
 Or if iupred.py is executable
 
-iupred.py seqfile type
+iupred2a.py (options) (sequence file) (iupred2 type)
   
-  where seqfile is the name of the sequence file
+  where sequence file is the location of a FASTA formatted sequence file
   
-  type is any of the option of 
+  iupred2 type is any of the option of
 
   	long
 	short 
 	glob
 	
   for prediction of long disorder, short disorder ( e.g. missing residues in
-  X-ray structures) or predicting globular domains. 
+  X-ray structures) or predicting globular domains.
+
+  Options:
+    -a: ANCHOR2 binding region prediction
+    -d path: Location of the 'data' directory. Default is the location of iupred2a.py
 
 
 INPUT FILE: sequence_file in fasta format. One sequence per file.
 
 EXAMPLE RUN: 
 
-iupred P53_HUMAN.seq long
+python3 iupred2a P53_HUMAN.seq long
 
 
 INTERPRETATION OF THE OUTPUT:
@@ -51,21 +53,7 @@ proteins is expected to be predicted to disordered (false positives).
 For the prediction type of globular domains it gives the number of globular
 domains and list their start and end position in the sequence. This is followed
 by the submitted sequence with residues of globular domains indicated by
-uppercase letters. 
-
-
-Please see the LICENSE file for the license terms for the software. It is
-basically free for academic users, but a license fee applies to commercial
-users. 
-
-THE PUBLICATION OF RESEARCH USING IUPred MUST INCLUDE AN APPROPRIATE
-CITATION TO THE METHOD:
-
-The Pairwise Energy Content Estimated from Amino Acid Composition Discriminates 
-between Folded and Intrinsically Unstructured Proteins
-Zsuzsanna Doszt�nyi, Veronika Csizm�k, P�ter Tompa and Istv�n Simon
-J. Mol. Biol. (2005) 347, 827-839.
-
+uppercase letters.
 
 SHORT SUMMARY OF THE METHOD
 
