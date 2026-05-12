@@ -44,46 +44,46 @@ The bundled IUPred2A Python code does not require external Python packages.
 
 ## Quick Start
 
-Run the included example sequence:
+Run with long disorder prediction:
 
 ```bash
-nextflow run doszilab/iupred2a --input 'iupred2a/P53_HUMAN.seq' --mode long
+nextflow run doszilab/iupred2a --input 'path/fasta.fasta' --mode long
 ```
 
 Run with ANCHOR2 binding-region prediction:
 
 ```bash
-nextflow run doszilab/iupred2a --input 'iupred2a/P53_HUMAN.seq' --mode long --anchor true
+nextflow run doszilab/iupred2a --input 'path/fasta.fasta' --mode long --anchor true
 ```
 
 Run all matching FASTA files:
 
 ```bash
-nextflow run doszilab/iupred2a --input 'data/*.fa' --mode short
+nextflow run doszilab/iupred2a --input 'path/*.fasta' --mode short
 ```
 
 Run a multi-FASTA file:
 
 ```bash
-nextflow run doszilab/iupred2a --input 'data/proteins.fasta' --mode long
+nextflow run doszilab/iupred2a --input 'path/multifasta.fasta' --mode long
 ```
 
 Use Docker:
 
 ```bash
-nextflow run doszilab/iupred2a --input 'iupred2a/P53_HUMAN.seq' --mode long -profile docker
+nextflow run doszilab/iupred2a --input 'path/fasta.fasta' --mode long -profile docker
 ```
 
 Use Apptainer:
 
 ```bash
-nextflow run doszilab/iupred2a --input 'iupred2a/P53_HUMAN.seq' --mode long -profile apptainer
+nextflow run doszilab/iupred2a --input 'path/fasta.fasta' --mode long -profile apptainer
 ```
 
 Use Conda:
 
 ```bash
-nextflow run doszilab/iupred2a --input 'iupred2a/P53_HUMAN.seq' --mode long -profile conda
+nextflow run doszilab/iupred2a --input 'path/fasta.fasta' --mode long -profile conda
 ```
 
 ## Parameters
@@ -162,7 +162,7 @@ Workflow manifest version 0.1.0
 The test command used was:
 
 ```bash
-nextflow run doszilab/iupred2a --input iupred2a/P53_HUMAN.seq --mode long
+nextflow run doszilab/iupred2a --input path/fasta.fa --mode long
 ```
 
 ## Citation
